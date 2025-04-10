@@ -1,0 +1,243 @@
+.cont {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.dashdiv {
+    width: 80vw;
+    height: 80vh;
+    color: #fff;
+    border-radius: 15px;
+    background-color: #54577a;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    text-align: center;
+}
+.cont section{
+    width: 100%;
+}
+section.populated{
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    
+}
+
+.starter-text{
+    padding: 0 80px;
+}
+
+.cont form{
+    min-height: 60px;
+    width: 100%;
+    display: flex;
+    border: #fff solid 4px;
+    border-radius: 10px 10px 10px 10px;
+    overflow: hidden;
+}
+ .cont input.question-box{
+    width: 85%;
+    padding: 10px;
+    font-size: 15px;
+    color: #fff;
+    border: none;
+ }
+ .cont input[type=submit]{
+    width: 15%;
+    padding: 5px;
+    font-size: 18px;
+ }
+ .cont button{
+    
+ }
+ .cont input:focus{
+    outline: none;
+ }
+
+ .loader{
+    margin: 10px;
+    width: 60px;
+    aspect-ratio: 4;
+    background: 
+    no-repeat radial-gradient(circle closest-side, #fff 90%, #0000 90%) 0 50%,
+    no-repeat radial-gradient(circle closest-side, #fff 90%, #0000 90%) 50% 50%,
+    no-repeat radial-gradient(circle closest-side, #fff 90%, #0000 90%) 100% 50%;
+    background-size: calc(100%/3) 100%;
+    animation: loading 1s linear infinite;
+ }
+ @keyframes loading {
+    33%{
+        background-size: calc(100%/3) 0, calc(100%/3) 100%, calc(100%/3) 100%;
+    }
+    50%{
+        background-size: calc(100%/3) 100%, calc(100%/3) 0, calc(100%/3) 100%;
+    }
+    66%{
+        background-size: calc(100%/3) 100%, calc(100%/3) 100%, calc(100%/3) 0;
+    }
+ }
+
+ .bubble{
+    margin: 8px;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+    color: #000000;
+    max-width: 80%;
+    text-align: left;
+ }
+
+ .bubble.user{
+    border-radius: 20px 20px 0 20px;
+    background-color: #b0b5f6;
+    margin-left: auto;
+ }
+ .bubble.assistant{
+    border-radius: 20px 20px 20px 0;
+    background-color: #dedeee;
+ }
+
+ .prompt-sug-btn{
+    margin: 8px;
+    padding: 8px;
+    font-size: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #2a2b38;
+    box-shadow: #454545 0 8px 24px;
+    cursor: pointer;
+ }
+.prompt-sug-btn:hover{
+    background-color: #000000;
+}
+ .custom-upload-button button {
+    position: relative;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    padding-right: 20px;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    transition: 200ms;
+  }
+  .custom-upload-button .ic {
+    position: absolute;
+    color: transparent;
+    transition: 200ms;
+  }
+  .custom-upload-button button:focus {
+    color: transparent;
+    outline: none;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 28px 28px;
+    border-left: 4px solid #fff;
+    animation: spin 2s 500ms forwards;
+  }
+  .custom-upload-button button:focus .ic {
+    animation: check 300ms 2250ms forwards;
+  }
+  
+  @keyframes spin {
+    80% {
+      border: 2px solid transparent;
+      border-left: 4px solid #fff;
+    }
+    100% {
+      transform: rotate(720deg);
+      border: 4px solid #fff;
+    }
+  }
+  
+  @keyframes check {
+    to {
+      color: #fff;
+    }
+  }
+
+  .Btn {
+    --black: #000000;
+    --ch-black: #141414;
+    --eer-black: #1b1b1b;
+    --night-rider: #2e2e2e;
+    --white: #ffffff;
+    --af-white: #f3f3f3;
+    --ch-white: #e1e1e1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: var(--af-white);
+  }
+  
+  /* plus sign */
+  .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sign svg {
+    width: 17px;
+  }
+  
+  .sign svg path {
+    fill: var(--night-rider);
+  }
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: var(--night-rider);
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .Btn:hover {
+    width: 125px;
+    border-radius: 5px;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+  }
+  .Btn:active {
+    transform: translate(2px ,2px);
+  }
